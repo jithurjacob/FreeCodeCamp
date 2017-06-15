@@ -1,55 +1,83 @@
 ﻿<!Doctype html>
 
 <head>
-<link src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" type="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 50px;
+        }
+
+        @media (min-width: 768px) {
+            .affix {
+                position: fixed;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .affix {
+                position: inherit;
+            }
+        }
+
+        h1 {
+            font-weight: 700;
+        }
+
+        h3 {
+            font-weight: 600;
+        }
+    </style>
 </head>
+
 <body>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6 affix">
-            <img class="image-responsive img-rounded center-block" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Alan_Turing_Aged_16.jpg/220px-Alan_Turing_Aged_16.jpg">
-            <h1 class="text-center">Alan Turing</h1>
-            <p>
-                <blockquote>
-                    <p>
-                        This man was a national treasure and we hounded him to his death... I'm looking for an apology from the British government because that's where I think the wrong was done. But Turing is clearly someone of international stature.</p>
-                    <footer> John Graham-Cumming, Computer Scientist</footer>
-                </blockquote>
-            </p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 affix">
+                <img class="image-responsive img-rounded center-block" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Alan_Turing_Aged_16.jpg/220px-Alan_Turing_Aged_16.jpg">
+                <h1 class="text-center">Alan Turing</h1>
+                <p>
+                    <blockquote>
+                        <p>
+                            This man was a national treasure and we hounded him to his death... I'm looking for an apology from the British government because that's where I think the wrong was done. But Turing is clearly someone of international stature.</p>
+                        <footer> John Graham-Cumming, Computer Scientist</footer>
+                    </blockquote>
+                </p>
+            </div>
+            <div class="col-xs-12  col-sm-6 col-md-6 col-md-offset-6 col-md-6 col-sm-offset-6">
+                <h3>His Story</h3>
+                <p>Alan Turing is often called the father of modern computing. He was a brilliant mathematician and logician. He developed the idea of the modern computer and artificial intelligence. During the Second World War he worked for the government
+                    breaking the enemies codes and Churchill said he shortened the war by two years.</p>
+
+                <p>Born in London in 1912, Alan Turing attended Sherborne School in Dorset and then, later, King's College Cambridge and Princeton University in the USA. </p>
+
+                <p>At the outbreak of World War Two, Alan joined the Government Codes and Cypher School at Bletchley Park. He worked on breaking the code for the German Enigma machine, a device for sending coded messages to units of the German forces. Alan
+                    developed a machine (the Bombe) which helped break the code. He also went on to break the Naval Enigma, an even more complicated machine. His wartime services helped to win the war, but his work was so secret that very few people were
+                    aware of the importance of what he had done at Bletchley Park.</p>
+
+                <p>Alan Turing went on to become deputy director of the computing lab at Manchester University.</p>
+
+                <p>He sadly died too young, in tragic circumstances, a victim of the discriminatory laws of the day. It is often wondered how much further ahead computing would be, if he had lived.</p>
+                <h3>His Legacy</h3>
+                <p>Alan Turing's work could be said to have begun the digital revolution. Although others around the world, such as the American, Alonzo Church, had done some work, it was Alan Turing who envisaged and designed a machine that could be given
+                    a rule set, upon which it would base its actions and could therefore be programmed to solve an infinite number of problems: in fact, any problem for which there was a solution(basically a modern computer). It was Alan Turing who was
+                    instrumental in the development of the Bombe at Bletchley Park and it was Alan Turing whose ground-breaking ideas about Artificial Intelligence (AI) really pushed the boundaries of mathematical thinking at that time.</p>
+
+
+                <p>When Time magazine published its list of the 100 most important people of the twentieth century, they included Alan Turing in that list and said of him:</p>
+
+
+                <p>"The fact remains that everyone who taps at a keyboard, opening a spreadsheet or a word-processing program, is working on an incarnation of a Turing machine."</p>
+
+                <p>Of his many important papers, the most well known are:</p>
+
+                <p>On Computable Numbers, with an Application to the Entscheidungsproblem (28 May 1936) in which Alan Turing first outlined his idea of a Universal Machine which could tackle any mathematical problem and which became known as the Turing Machine.</p>
+
+                <p>Computing Machinery and Intelligence (1950) in which Alan Turing first proposes the Turing test to decide whether a computer can be called intelligent or not.</p>
+
+            </div>
         </div>
-        <div class="col-xs-12  col-sm-6 col-md-6 col-md-offset-6 col-md-6 col-sm-offset-6">
-            <h3>His Story</h3>
-            <p>Alan Turing is often called the father of modern computing. He was a brilliant mathematician and logician. He developed the idea of the modern computer and artificial intelligence. During the Second World War he worked for the government breaking
-                the enemies codes and Churchill said he shortened the war by two years.</p>
 
-            <p>Born in London in 1912, Alan Turing attended Sherborne School in Dorset and then, later, King's College Cambridge and Princeton University in the USA. </p>
-
-            <p>At the outbreak of World War Two, Alan joined the Government Codes and Cypher School at Bletchley Park. He worked on breaking the code for the German Enigma machine, a device for sending coded messages to units of the German forces. Alan developed
-                a machine (the Bombe) which helped break the code. He also went on to break the Naval Enigma, an even more complicated machine. His wartime services helped to win the war, but his work was so secret that very few people were aware of the
-                importance of what he had done at Bletchley Park.</p>
-
-            <p>Alan Turing went on to become deputy director of the computing lab at Manchester University.</p>
-
-            <p>He sadly died too young, in tragic circumstances, a victim of the discriminatory laws of the day. It is often wondered how much further ahead computing would be, if he had lived.</p>
-            <h3>His Legacy</h3>
-            <p>Alan Turing's work could be said to have begun the digital revolution. Although others around the world, such as the American, Alonzo Church, had done some work, it was Alan Turing who envisaged and designed a machine that could be given a
-                rule set, upon which it would base its actions and could therefore be programmed to solve an infinite number of problems: in fact, any problem for which there was a solution(basically a modern computer). It was Alan Turing who was instrumental
-                in the development of the Bombe at Bletchley Park and it was Alan Turing whose ground-breaking ideas about Artificial Intelligence (AI) really pushed the boundaries of mathematical thinking at that time.</p>
-
-
-            <p>When Time magazine published its list of the 100 most important people of the twentieth century, they included Alan Turing in that list and said of him:</p>
-
-
-            <p>"The fact remains that everyone who taps at a keyboard, opening a spreadsheet or a word-processing program, is working on an incarnation of a Turing machine."</p>
-
-            <p>Of his many important papers, the most well known are:</p>
-
-            <p>On Computable Numbers, with an Application to the Entscheidungsproblem (28 May 1936) in which Alan Turing first outlined his idea of a Universal Machine which could tackle any mathematical problem and which became known as the Turing Machine.</p>
-
-            <p>Computing Machinery and Intelligence (1950) in which Alan Turing first proposes the Turing test to decide whether a computer can be called intelligent or not.</p>
-
-        </div>
     </div>
-
-</div>
 </body>
