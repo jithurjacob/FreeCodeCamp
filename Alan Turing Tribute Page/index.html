@@ -3,6 +3,7 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
@@ -21,12 +22,56 @@
             }
         }
 
+        blockquote p {
+            width: 90%
+        }
+
         h1 {
             font-weight: 700;
         }
 
         h3 {
             font-weight: 600;
+        }
+
+        h3 {
+            padding: 10px 20px;
+            margin: 0 0 20px;
+            border-left: 5px solid #555;
+        }
+.timeline{
+    position: absolute;
+}
+        .timeline::before {
+            content: '';
+            height: 100%;
+            width: 4px;
+            background-color: #555;
+            position: absolute;
+            margin-left: 50%;
+            z-index: -1;
+        }
+        .timeline-event{
+            
+            margin:0px 0px 5% 10%;
+            background-color: #555;
+            padding: 10px;
+            color: white;           
+        }
+        .timeline-event::before{
+            /*content: '';
+            position: absolute;
+            margin-left: -12%;
+            width:88%;
+            color:#333;
+            border-top: 4px solid #555;*/
+        }
+        .time{
+            font-size: 24px;
+
+        }
+        p,.desc{
+                text-align: justify;
         }
     </style>
 </head>
@@ -46,38 +91,169 @@
                 </p>
             </div>
             <div class="col-xs-12  col-sm-6 col-md-6 col-md-offset-6 col-md-6 col-sm-offset-6">
-                <h3>His Story</h3>
-                <p>Alan Turing is often called the father of modern computing. He was a brilliant mathematician and logician. He developed the idea of the modern computer and artificial intelligence. During the Second World War he worked for the government
-                    breaking the enemies codes and Churchill said he shortened the war by two years.</p>
+                <div>
+                    <h3>His Story</h3>
+                    <p>Alan Turing is often called the father of modern computing. He was a brilliant mathematician and logician. He developed the idea of the modern computer and artificial intelligence. During the Second World War he worked for the government
+                        breaking the enemies codes and Churchill said he shortened the war by two years.</p>
 
-                <p>Born in London in 1912, Alan Turing attended Sherborne School in Dorset and then, later, King's College Cambridge and Princeton University in the USA. </p>
+                    <p>Born in London in 1912, Alan Turing attended Sherborne School in Dorset and then, later, King's College Cambridge and Princeton University in the USA. </p>
 
-                <p>At the outbreak of World War Two, Alan joined the Government Codes and Cypher School at Bletchley Park. He worked on breaking the code for the German Enigma machine, a device for sending coded messages to units of the German forces. Alan
-                    developed a machine (the Bombe) which helped break the code. He also went on to break the Naval Enigma, an even more complicated machine. His wartime services helped to win the war, but his work was so secret that very few people were
-                    aware of the importance of what he had done at Bletchley Park.</p>
+                    <p>At the outbreak of World War Two, Alan joined the Government Codes and Cypher School at Bletchley Park. He worked on breaking the code for the German Enigma machine, a device for sending coded messages to units of the German forces.
+                        Alan developed a machine (the Bombe) which helped break the code. He also went on to break the Naval Enigma, an even more complicated machine. His wartime services helped to win the war, but his work was so secret that very few
+                        people were aware of the importance of what he had done at Bletchley Park.</p>
 
-                <p>Alan Turing went on to become deputy director of the computing lab at Manchester University.</p>
+                    <p>Alan Turing went on to become deputy director of the computing lab at Manchester University.</p>
 
-                <p>He sadly died too young, in tragic circumstances, a victim of the discriminatory laws of the day. It is often wondered how much further ahead computing would be, if he had lived.</p>
-                <h3>His Legacy</h3>
-                <p>Alan Turing's work could be said to have begun the digital revolution. Although others around the world, such as the American, Alonzo Church, had done some work, it was Alan Turing who envisaged and designed a machine that could be given
-                    a rule set, upon which it would base its actions and could therefore be programmed to solve an infinite number of problems: in fact, any problem for which there was a solution(basically a modern computer). It was Alan Turing who was
-                    instrumental in the development of the Bombe at Bletchley Park and it was Alan Turing whose ground-breaking ideas about Artificial Intelligence (AI) really pushed the boundaries of mathematical thinking at that time.</p>
+                    <p>He sadly died too young, in tragic circumstances, a victim of the discriminatory laws of the day. It is often wondered how much further ahead computing would be, if he had lived.</p>
+                </div>
+                <br>
+                <div>
+                    <h3>His Legacy</h3>
+                    <p>Alan Turing's work could be said to have begun the digital revolution. Although others around the world, such as the American, Alonzo Church, had done some work, it was Alan Turing who envisaged and designed a machine that could be
+                        given a rule set, upon which it would base its actions and could therefore be programmed to solve an infinite number of problems: in fact, any problem for which there was a solution(basically a modern computer). It was Alan Turing
+                        who was instrumental in the development of the Bombe at Bletchley Park and it was Alan Turing whose ground-breaking ideas about Artificial Intelligence (AI) really pushed the boundaries of mathematical thinking at that time.</p>
 
 
-                <p>When Time magazine published its list of the 100 most important people of the twentieth century, they included Alan Turing in that list and said of him:</p>
+                    <p>When Time magazine published its list of the 100 most important people of the twentieth century, they included Alan Turing in that list and said of him:</p>
 
 
-                <p>"The fact remains that everyone who taps at a keyboard, opening a spreadsheet or a word-processing program, is working on an incarnation of a Turing machine."</p>
+                    <p>"The fact remains that everyone who taps at a keyboard, opening a spreadsheet or a word-processing program, is working on an incarnation of a Turing machine."</p>
 
-                <p>Of his many important papers, the most well known are:</p>
+                    <p>Of his many important papers, the most well known are:</p>
 
-                <p>On Computable Numbers, with an Application to the Entscheidungsproblem (28 May 1936) in which Alan Turing first outlined his idea of a Universal Machine which could tackle any mathematical problem and which became known as the Turing Machine.</p>
+                    <p>On Computable Numbers, with an Application to the Entscheidungsproblem (28 May 1936) in which Alan Turing first outlined his idea of a Universal Machine which could tackle any mathematical problem and which became known as the Turing
+                        Machine.
+                    </p>
 
-                <p>Computing Machinery and Intelligence (1950) in which Alan Turing first proposes the Turing test to decide whether a computer can be called intelligent or not.</p>
+                    <p>Computing Machinery and Intelligence (1950) in which Alan Turing first proposes the Turing test to decide whether a computer can be called intelligent or not.</p>
+                </div>
+                <div>
+                    <h3>His Timeline</h3>
+                    <div class="timeline">
+                        <div class="timeline-event">
+                            <div class="time">1912</div>
+                            <div class="desc">Alan Mathison Turing born in Maida Vale, London, to Ethel Sara Turing (nee Stoney) and Julius Mathison Turing.</div>
+                        </div>
+                        
+                        <div class="timeline-event">
+                            <div class="time">1918</div>
+                            <div class="desc">Alan joins St Michael's day school in Hastings, where he does not do very well. He is sent to Hazelhurst Preparatory School when he is ten where he does much better and learns to play chess.</div>
+                        </div>
+
+                        <div class="timeline-event">
+                            <div class="time">1912</div>
+                            <div class="desc">Alan Mathison Turing born in Maida Vale, London, to Ethel Sara Turing (nee Stoney) and Julius Mathison Turing.</div>
+                        </div>
+
+                        <div class="timeline-event">
+                            <div class="time">1926</div>
+                            <div class="desc">Alan becomes a pupil at Sherborne School in Dorset. Alan is not interested in their traditional classical education as he really wants to spend his time doing Science and Mathematics</div>
+                        </div>
+
+                        <div class="timeline-event">
+                            <div class="time">1927</div>
+                            <div class="desc">Alan becomes deeply interested in the work of Albert Einstein and is able to develop work done by Einstein based on a questioning of Newton's Laws of Motion.</div>
+                        </div>
+
+                        <div class="timeline-event">
+                            <div class="time">1928 - 1930</div>
+                            <div class="desc">Alan enters 6th form at Sherborne and becomes great friends with Christopher Morcom, another talented boy who loves Maths and Science. While they are applying for university, Christopher suddenly dies. Alan is devastated.</div>
+                        </div>
+
+                        <div class="timeline-event">
+                            <div class="time">1931-1934</div>
+                            <div class="desc">Alan becomes an undergraduate at King's College, Cambridge to study Mathematics. He enjoys university and is highly successful. He graduates with distinction.</div>
+                        </div>
+
+                        <div class="timeline-event">
+                            <div class="time">1935</div>
+                            <div class="desc">Alan's work is so distinguished that he is elected Fellow of King's College, aged only 23.</div>
+                        </div>
+
+                        <div class="timeline-event">
+                            <div class="time">1938</div>
+                            <div class="desc">Alan goes to Princeton University in America to study mathematics and is awarded a PhD.</div>
+                        </div>
+
+                        <div class="timeline-event">
+                            <div class="time">1939</div>
+                            <div class="desc">September - Alan is asked to join the Government Codes and Ciphers School and arrives at Bletchley Park the day after war is declared.</div>
+                        </div>
+
+                        <div class="timeline-event">
+                            <div class="time">1939 - 1940</div>
+                            <div class="desc">With Gordon Welchman, Alan develops the Bombe, a device for decrypting the messages sent by the Germans using their Enigma machine.</div>
+                        </div>
+
+                        <div class="timeline-event">
+                            <div class="time">1940 - 1942</div>
+                            <div class="desc">During 1942, Alan and his colleagues also manage to break the more complicated German Naval Enigma system. This is a tremendous help to the Allies in the Battle of the Atlantic.</div>
+                        </div>
+
+                        <div class="timeline-event">
+                            <div class="time">1943 - 1945</div>
+                            <div class="desc">Alan is asked to work as a top level intelligence link with USA, which he visits to share information on cryptology (code-breaking).</div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="time">1945</div>
+                            <div class="desc">At the end of the war, Alan Turing is awarded the OBE for his wartime services.</div>
+                        </div>
+
+                        <div class="timeline-event">
+                            <div class="time">1946</div>
+                            <div class="desc">Alan joins the National Physical Laboratory, in Teddington and he publishes a paper with the first detailed design of a stored-program computer.</div>
+                        </div>
+
+                        <div class="timeline-event">
+                            <div class="time">1948</div>
+                            <div class="desc">Alan is appointed as as Reader in the Mathematics Department of Manchester University.</div>
+                        </div>
+
+                        <div class="timeline-event">
+                            <div class="time">1949</div>
+                            <div class="desc">Alan is made deputy director of the Computing Laboratory at Manchester University.</div>
+                        </div>
+
+                        <div class="timeline-event">
+                            <div class="time">1950</div>
+                            <div class="desc">Alan publishes'Computing Machinery and Intelligence' in which he develops the Turing Test, an attempt to define a standard for a machine to be called intelligent. The paper will become very famous.</div>
+                        </div>
+
+                        <div class="timeline-event">
+                            <div class="time">1951</div>
+                            <div class="desc">During his year, Alan is elected Fellow of the Royal Society FRS and also gives a talk about Artificial Intelligence on the BBC radio's Third Programme.</div>
+                        </div>
+
+                        <div class="timeline-event">
+                            <div class="time">1952</div>
+                            <div class="desc">January - Alan is arrested for gross indecency and loses his security clearance. He is offered chemical treatment as an alternative to imprisonment. The hormone treatment has a very detrimental effect on him.</div>
+                        </div>
+
+                        <div class="timeline-event">
+                            <div class="time">1954</div>
+                            <div class="desc">June 8th - Alan's body is found in his home in Wilmslow, Cheshire. The post-mortem finds that his death had been caused by poisoning. A half-eaten apple is found next to him laced with cyanide. His body is cremated at Woking crematorium.</div>
+                        </div>
+
+                        <div class="timeline-event">
+                            <div class="time">1966</div>
+                            <div class="desc">The annual Turing Award is established and given each year to a person for technical contributions to the computing community. It is generally viewed as important as the Nobel Prize.</div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="time">1986</div>
+                            <div class="desc">The play, Breaking the Code by Hugh Whitemore opens in the West End and then transfers to Broadway. The part of Alan Turing is played by Derek Jacobi who is nominated for three Tony Awards.</div>
+                        </div>
+                        <div class="timeline-event">
+                            <div class="time">2009 - September</div>
+                            <div class="desc">In response to a petition signed by thousands of people, The Prime Minister, Gordon Brown issues a public apology in which he describes the treatment of Alan Turing as "appalling".</div>
+                        </div>
+                        
+                    </div>
+                </div>
 
             </div>
         </div>
 
     </div>
+
+
 </body>
