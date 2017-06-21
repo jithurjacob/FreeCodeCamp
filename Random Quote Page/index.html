@@ -9,7 +9,12 @@
         body {
             background-color: #6A1B9A;
         }
-
+a{
+    text-decoration: none;
+}
+.fa-3{
+    font-size: 1.5em;
+}
         .quote-container {
             /*border: 1px solid black;*/
             margin-top: 25%;
@@ -21,9 +26,12 @@
             cursor: pointer;
         }
 
-        .new_quote:hover {
+        /*.new_quote:hover {
             transform: rotate(80deg);
             -webkit-transform: rotate(80deg);
+        }*/
+        .margin-right-4{
+            margin-right: 4px;
         }
     </style>
 </head>
@@ -38,8 +46,8 @@
                         <p id="quote-text">
                         </p>
                         <footer id="quote-author"> </footer>
-                        <i class="fa fa-twitter fa-3 pull-left" aria-hidden="true"></i>
-                        <i class="fa fa-refresh fa-3 pull-right new_quote" aria-hidden="true"></i>
+                        <a href="https://twitter.com/intent/tweet" id="twitter_link" target="_blank"><i class="fa fa-twitter fa-3 pull-right " aria-hidden="true"></i></a>
+                        <i class="fa fa-random fa-3 pull-right new_quote margin-right-4" aria-hidden="true"></i>
                         
                         
 
@@ -71,7 +79,7 @@
                     }
                     currentQuote = r.quote;
                     currentAuthor = r.author;
-
+                    $("#twitter_link").attr("href","https://twitter.com/intent/tweet?text="+r.quote);
                     $("#quote-text").animate({
                             opacity: 0
                         }, 500,
