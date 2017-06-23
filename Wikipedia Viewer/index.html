@@ -1,0 +1,105 @@
+<!Doctype html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #333;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+
+
+        .icon-container {
+            /*border: 1px solid black;*/
+            margin-top: 15%;
+            /*background-color: white;*/
+            padding: 20px;
+        }
+
+        .fa {
+            cursor: pointer;
+        }
+
+        .fa-3 {
+            font-size: 1.5em;
+        }
+
+        .fa-5 {
+            font-size: 2.5em;
+        }
+        /*.new_quote:hover {
+            transform: rotate(80deg);
+            -webkit-transform: rotate(80deg);
+        }*/
+
+        .margin-right-4 {
+            margin-right: 4px;
+        }
+
+        .random-article {
+            color: #fff;
+        }
+
+        .search-icon {
+            color: #ef5800;
+        }
+
+        .pager li>a:hover,
+        .pager li>span:hover {
+            background-color: #ef5800;
+            border: 1px solid #ef5800;
+            color: white;
+        }
+
+        .form-control:focus {
+            border-color: #333;
+            box-shadow: none;
+        }
+
+        .answer {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row vertical">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3   icon-container">
+                <input type="text" class="form-control" placeholder="Enter your search term">
+                <div>
+                    <ul class="pager">
+                        <li><a class="search-wiki" href="#">Search Wiki</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Random Wiki</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row answer">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h3 class="title">Answer</h3>
+                <p  class="description">blah blah</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(".search-wiki").on("click", function () {
+                alert(0);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
