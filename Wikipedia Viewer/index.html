@@ -67,13 +67,16 @@
             background-color: white;
             margin: 0 0 10px 0;
         }
-        .answer:hover{
+
+        .answer:hover {
             border-left: 3px solid #ef5800;
         }
-        .answer_hidden{
+
+        .answer_hidden {
             display: none;
         }
-        .wiki-logo{
+
+        .wiki-logo {
             height: 100px;
             margin-bottom: 20px;
         }
@@ -96,34 +99,45 @@
         </div>
         <div class="row answer answer_hidden">
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <h3 class="title">Answer</h3>
-                <p  class="description">blah blah</p>
+                <a target="_blank" class="page_link"><h3 class="title">Answer</h3></a>
+                <p class="description">blah blah</p>
             </div>
         </div>
     </div>
     <script>
         $(document).ready(function () {
             $(".search-wiki").on("click", function () {
-               findAnswer();
+                findAnswer();
             });
             $(".search-input").on("keypress", function (e) {
-                if(e.keyCode == 13){
+                if (e.keyCode == 13) {
                     findAnswer();
                     return false;
                 }
             });
         });
-        function findAnswer(){
+        function findAnswer() {
             $(".answer_shown").remove();
-                var $base_answer = $(".answer_hidden");
-                var arr = [["test1","des"],["test2","des2"]];
-                arr.forEach(function(elem){
-                    var $ans =$base_answer.clone();
-                    $ans.removeClass("answer_hidden");
-                    $ans.addClass("answer_shown");
-                    $ans.find(".title").text("hi");
-                    $(".container").append($ans); 
-                });
+            var $base_answer = $(".answer_hidden");
+            $.ajax({
+                url: "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=Einstein",
+                headers: { 'Api-User-Agent': 'Example/1.0' },
+                contentType: "jsonp", // Pay attention to the dataType/contentType
+                dataType: 'jsonp', // Pay attention to the dataType/contentType
+                success: function (data) {
+                    console.log(data);
+                    Object.keys(data.query.pages).forEach(function (key) {
+                        var $ans = $base_answer.clone();
+                        $ans.removeClass("answer_hidden");
+                        $ans.addClass("answer_shown");
+                        $ans.find(".page_link").attr("href","https://en.wikipedia.org/?curid="+key);
+                        $ans.find(".title").text(data.query.pages[key].title);
+                        $ans.find(".description").text(data.query.pages[key].extract);
+                        $(".container").append($ans);
+                    });
+                }
+            });
+
         }
     </script>
 
