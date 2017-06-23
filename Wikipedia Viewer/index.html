@@ -68,6 +68,13 @@
 
         .answer {
             background-color: white;
+            margin: 10px 0 0 0;
+        }
+        .answer:hover{
+            border-left: 3px solid #ef5800;
+        }
+        .answer_hidden{
+            display: none;
         }
     </style>
 </head>
@@ -85,7 +92,7 @@
                 </div>
             </div>
         </div>
-        <div class="row answer">
+        <div class="row answer answer_hidden">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <h3 class="title">Answer</h3>
                 <p  class="description">blah blah</p>
@@ -95,7 +102,14 @@
     <script>
         $(document).ready(function () {
             $(".search-wiki").on("click", function () {
-                alert(0);
+                var $base_answer = $(".answer_hidden");
+                var arr = [["test1","des"],["test2","des2"]];
+                arr.forEach(function(elem){
+                    var $ans =$base_answer.clone();
+                    $ans.removeClass("answer_hidden");
+                    $ans.find(".title").text("hi");
+                    $(".container").append($ans); 
+                });
             });
         });
     </script>
