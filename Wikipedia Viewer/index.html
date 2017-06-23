@@ -16,12 +16,9 @@
             text-decoration: none;
         }
 
-
-
-
         .icon-container {
             /*border: 1px solid black;*/
-            margin-top: 15%;
+            margin-top: 5%;
             /*background-color: white;*/
             padding: 20px;
         }
@@ -68,7 +65,7 @@
 
         .answer {
             background-color: white;
-            margin: 10px 0 0 0;
+            margin: 0 0 10px 0;
         }
         .answer:hover{
             border-left: 3px solid #ef5800;
@@ -76,14 +73,19 @@
         .answer_hidden{
             display: none;
         }
+        .wiki-logo{
+            height: 100px;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <div class="row vertical">
-            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3   icon-container">
-                <input type="text" class="form-control" placeholder="Enter your search term">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3 text-center  icon-container">
+                <img class="wiki-logo " src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1122px-Wikipedia-logo-v2.svg.png">
+                <input type="text" class="form-control search-input" placeholder="Enter your search term">
                 <div>
                     <ul class="pager">
                         <li><a class="search-wiki" href="#">Search Wiki</a></li>
@@ -102,16 +104,27 @@
     <script>
         $(document).ready(function () {
             $(".search-wiki").on("click", function () {
+               findAnswer();
+            });
+            $(".search-input").on("keypress", function (e) {
+                if(e.keyCode == 13){
+                    findAnswer();
+                    return false;
+                }
+            });
+        });
+        function findAnswer(){
+            $(".answer_shown").remove();
                 var $base_answer = $(".answer_hidden");
                 var arr = [["test1","des"],["test2","des2"]];
                 arr.forEach(function(elem){
                     var $ans =$base_answer.clone();
                     $ans.removeClass("answer_hidden");
+                    $ans.addClass("answer_shown");
                     $ans.find(".title").text("hi");
                     $(".container").append($ans); 
                 });
-            });
-        });
+        }
     </script>
 
 </body>
