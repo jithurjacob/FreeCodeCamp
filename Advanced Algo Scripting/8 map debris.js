@@ -18,7 +18,7 @@ function orbitalPeriod(arr) {
 
     return arr_;
 }
-
+//http://keisan.casio.com/exec/system/1224665242
 console.log(orbitalPeriod([{ name: "sputnik", avgAlt: 35873.5553 }]));
 //86400
 console.log(orbitalPeriod([{ name: "iss", avgAlt: 413.6 }, { name: "hubble", avgAlt: 556.7 }, { name: "moon", avgAlt: 378632.553 }]));
