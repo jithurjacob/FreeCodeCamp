@@ -1,1 +1,95 @@
-﻿
+﻿<!Doctype html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <style>
+        body {
+            background-color: #1b719a;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .fa-3 {
+            font-size: 1.5em;
+        }
+
+        .fa {
+            cursor: pointer;
+        }
+
+        .twitch_container {
+            background-color: white;
+            margin-top: 15%;
+            /*margin-bottom: 15%;*/
+            padding: 20px;
+            color: #333;
+
+            border-radius: 1%;
+        }
+
+        .inline {
+            display: inline;
+        }
+
+        .vertical-align {
+            vertical-align: middle;
+        }
+
+        .inline-block {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .margin-25{
+            margin-top: 25px;
+        }
+        .margin-10{
+            margin-top: 10px;
+        }
+        .streamers{
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3 twitch_container">
+                <h1 class="text-center">TWITCH STREAMERS</h1>
+                <div class="btn-group pull-right" data-toggle="buttons">
+                    <label class="btn btn-primary active">
+                        <input type="radio" name="options" id="option1" value="all" autocomplete="off" checked> All
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="radio" name="options" id="option2" value="online" autocomplete="off"> Online
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="radio" name="options" id="option3" value="offline" autocomplete="off"> Offline
+                    </label>
+                </div>
+                <div class="margin-25 streamers">
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function getStatus(filter){
+
+        }
+        $('.btn').on('click', function () {
+            getStatus($(this).children()[0].value)
+         });
+         getStatus("all");
+    </script>
+</body>
+
+</html>
