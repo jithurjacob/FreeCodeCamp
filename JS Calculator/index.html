@@ -78,6 +78,22 @@
             padding: 5px;
         }*/
 
+        .col-panel {
+            background: rgba(255, 255, 255, 0.49);
+            color: black;
+            height: 60px;
+            padding: 5px;
+            border: 1px solid white;
+            /* border: 2px solid rgba(255, 255, 255, 0.35); */
+            /* border-radius: 200px; */
+            border: double 15px rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.7);
+            background-clip: padding-box;
+            cursor: default;
+            font-size: 20px;
+            vertical-align: middle;
+        }
+
         .col {
             background: rgba(255, 255, 255, 0.49);
             color: black;
@@ -89,12 +105,26 @@
             border: double 15px rgba(255, 255, 255, 0.7);
             background: rgba(255, 255, 255, 0.7);
             background-clip: padding-box;
+            cursor: pointer;
+            font-size: 20px;
+            vertical-align: middle;
+        }
+
+        .col:hover {
+            /*background: rgba(255, 255, 255, 0.3);*/
+            /*background-clip: padding-box;*/
+            /*border: double 15px rgba(255, 255, 255, 0.7);*/
+            border: double 15px #505050;
+            background-color: #505050;
+            color: white;
         }
 
         .row>.comments-site-feed {
             /*background: rgba(255, 255, 255, 0.49);;*/
             color: black;
             height: 120px;
+            vertical-align: middle;
+            line-height: 80px;
         }
 
         h2 {
@@ -123,12 +153,12 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12  col">panel</div>
+                    <div class="col-md-12  col-panel">panel</div>
                 </div>
                 <div class="row">
                     <div class="col-md-3  col">CE</div>
-                    <div class="col-md-3  col">/</div>
-                    <div class="col-md-3  col">*</div>
+                    <div class="col-md-3  col">÷</div>
+                    <div class="col-md-3  col">X</div>
                     <div class="col-md-3  col">-</div>
                 </div>
                 <div class="row">
