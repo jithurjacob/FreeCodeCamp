@@ -1,0 +1,182 @@
+<!Doctype html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <style>
+        /*body {
+            background: url("https://static.pexels.com/photos/237588/pexels-photo-237588.jpeg") center center no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: 'Open Sans', sans-serif;
+        }*/
+
+        body {
+            /*position: absolute;*/
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #000;
+        }
+
+        body:before {
+            content: "";
+            position: absolute;
+            height: 20%;
+            width: 20%;
+            background: url(https://static.pexels.com/photos/237588/pexels-photo-237588.jpeg);
+            background-size: cover;
+            z-index: -1;
+            /* Keep the background behind the content */
+            /* don't forget to use the prefixes you need */
+            -webkit-transform: scale(5);
+            -webkit-transform-origin: top left;
+            -webkit-filter: blur(1px);
+        }
+
+        .weather_container {
+
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            margin-top: 15%;
+            /*margin-bottom: 15%;*/
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            color: white;
+            box-shadow: inset 0px 2px 179px -40px rgba(242, 239, 242, 1);
+            border-radius: 1%;
+        }
+
+        .inline {
+            display: inline;
+        }
+
+        .vertical-align {
+            vertical-align: middle;
+        }
+
+        .inline-block {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .table>tbody>tr>td,
+        .table>tbody>tr>th,
+        .table>tfoot>tr>td,
+        .table>tfoot>tr>th,
+        .table>thead>tr>td,
+        .table>thead>tr>th {
+            border: 0;
+        }
+
+        table,
+        .table-responsive {
+            border: 0;
+        }
+
+        td {
+            vertical-align: top;
+        }
+
+        .calc-btn {
+            text-align: center;
+            background-color: white;
+            height: 100%;
+            overflow: auto;
+            /*position:absolute;*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-sm-offset-5 col-md-offset-5 weather_container">
+                <h2 class="text-center">CALCULATOR</h2>
+                <div class="table-responsive">
+                    <table class="table text-center">
+                        <tbody>
+                            <tr>
+                                <td colspan="3" class="display-panel">Table cell</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="calc-btn">AC</div>
+                                </td>
+                                <td>
+                                    <div class="calc-btn">CE</div>
+                                </td>
+                                <td>
+                                    <div class="calc-btn">X</div>
+                                </td>
+                                <td>
+                                    <div class="calc-btn">-</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="calc-btn">7</div>
+                                </td>
+                                <td>
+                                    <div class="calc-btn">8</div>
+                                </td>
+                                <td>
+                                    <div class="calc-btn">9</div>
+                                </td>
+                                <td rowspan="2">
+                                    <div class="calc-btn">+</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="calc-btn">4</div>
+                                </td>
+                                <td>
+                                    <div class="calc-btn">5</div>
+                                </td>
+                                <td>
+                                    <div class="calc-btn">6</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="calc-btn">1</div>
+                                </td>
+                                <td>
+                                    <div class="calc-btn">2</div>
+                                </td>
+                                <td>
+                                    <div class="calc-btn">3</div>
+                                </td>
+                                <td rowspan="2">
+                                    <div class="calc-btn">=</div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="calc-btn">0</div>
+                                </td>
+                                <td>
+                                    <div class="calc-btn">.</div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script>
+
+    </script>
+</body>
+
+</html>
