@@ -5,7 +5,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
+
     <style>
         body {
             background-color: #1b719a;
@@ -46,14 +46,28 @@
             display: inline-block;
             vertical-align: middle;
         }
-        .margin-25{
+
+        .margin-25 {
             margin-top: 25px;
         }
-        .margin-10{
+
+        .margin-10 {
             margin-top: 10px;
         }
-        .streamers{
+
+        .streamers {
             clear: both;
+        }
+
+        .streamer {
+            padding: 10px 5px 10px 5px;
+            background-color: red;
+            background-color: rgba(51, 51, 51, 0.19);
+        }
+
+        .streamer:hover {
+            background-color: #333;
+            /*background-color: rgba(51, 51, 51, 0.19);*/
         }
     </style>
 </head>
@@ -63,7 +77,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3 twitch_container">
                 <h1 class="text-center">TWITCH STREAMERS</h1>
-                <div class="btn-group pull-right" data-toggle="buttons">
+                <div class="btn-group pull-right_" data-toggle="buttons">
                     <label class="btn btn-primary active">
                         <input type="radio" name="options" id="option1" value="all" autocomplete="off" checked> All
                     </label>
@@ -75,20 +89,32 @@
                     </label>
                 </div>
                 <div class="margin-25 streamers">
-                    
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <tbody>
+                                <tr>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
 
     </div>
     <script>
-        function getStatus(filter){
-
+        function getStatus(filter) {
+            var users = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
+            
         }
         $('.btn').on('click', function () {
             getStatus($(this).children()[0].value)
-         });
-         getStatus("all");
+        });
+        getStatus("all");
     </script>
 </body>
 
