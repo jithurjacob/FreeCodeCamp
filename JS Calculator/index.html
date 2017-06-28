@@ -42,7 +42,7 @@
         .weather_container {
 
             border: 1px solid rgba(255, 255, 255, 0.35);
-            margin-top: 15%;
+            margin-top: 5%;
             /*margin-bottom: 15%;*/
             background-color: rgba(255, 255, 255, 0.05);
             padding: 20px;
@@ -64,24 +64,6 @@
             vertical-align: middle;
         }
 
-        .table>tbody>tr>td,
-        .table>tbody>tr>th,
-        .table>tfoot>tr>td,
-        .table>tfoot>tr>th,
-        .table>thead>tr>td,
-        .table>thead>tr>th {
-            border: 0;
-        }
-
-        table,
-        .table-responsive {
-            border: 0;
-        }
-
-        td {
-            vertical-align: top;
-        }
-
         .calc-btn {
             text-align: center;
             background-color: white;
@@ -89,87 +71,110 @@
             overflow: auto;
             /*position:absolute;*/
         }
+        /*.col {
+            background: rgba(255, 255, 255, 0.49);;
+            color: black;
+            height: 40px;
+            padding: 5px;
+        }*/
+
+        .col {
+            background: rgba(255, 255, 255, 0.49);
+            color: black;
+            height: 60px;
+            padding: 5px;
+            border: 1px solid white;
+            /* border: 2px solid rgba(255, 255, 255, 0.35); */
+            /* border-radius: 200px; */
+            border: double 15px rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.7);
+            background-clip: padding-box;
+        }
+
+        .row>.comments-site-feed {
+            /*background: rgba(255, 255, 255, 0.49);;*/
+            color: black;
+            height: 120px;
+        }
+
+        h2 {
+            color: transparent;
+        }
+
+        span {
+            background: url(https://static.pexels.com/photos/237588/pexels-photo-237588.jpeg) -20px -20px repeat;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            display: block;
+            font-size: 40px
+        }
     </style>
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-12 col-sm-3 col-md-3 col-sm-offset-5 col-md-offset-5 weather_container">
-                <h2 class="text-center">CALCULATOR</h2>
-                <div class="table-responsive">
-                    <table class="table text-center">
-                        <tbody>
-                            <tr>
-                                <td colspan="3" class="display-panel">Table cell</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="calc-btn">AC</div>
-                                </td>
-                                <td>
-                                    <div class="calc-btn">CE</div>
-                                </td>
-                                <td>
-                                    <div class="calc-btn">X</div>
-                                </td>
-                                <td>
-                                    <div class="calc-btn">-</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="calc-btn">7</div>
-                                </td>
-                                <td>
-                                    <div class="calc-btn">8</div>
-                                </td>
-                                <td>
-                                    <div class="calc-btn">9</div>
-                                </td>
-                                <td rowspan="2">
-                                    <div class="calc-btn">+</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="calc-btn">4</div>
-                                </td>
-                                <td>
-                                    <div class="calc-btn">5</div>
-                                </td>
-                                <td>
-                                    <div class="calc-btn">6</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="calc-btn">1</div>
-                                </td>
-                                <td>
-                                    <div class="calc-btn">2</div>
-                                </td>
-                                <td>
-                                    <div class="calc-btn">3</div>
-                                </td>
-                                <td rowspan="2">
-                                    <div class="calc-btn">=</div>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <div class="calc-btn">0</div>
-                                </td>
-                                <td>
-                                    <div class="calc-btn">.</div>
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
+            <div class="col-xs-12 col-sm-3 col-md-3 col-sm-offset-5 col-md-offset-5 weather_container text-center">
+                <!--<h2 class="text-center"><span>CALCULATOR</span></h2>-->
+                <!--calc-->
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <h2 class="text-center"><span>CALCULATOR</span></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  col">panel</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3  col">CE</div>
+                    <div class="col-md-3  col">/</div>
+                    <div class="col-md-3  col">*</div>
+                    <div class="col-md-3  col">-</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-4  col">7</div>
+                            <div class="col-md-4  col">8</div>
+                            <div class="col-md-4  col">9</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4  col">4</div>
+                            <div class="col-md-4  col">5</div>
+                            <div class="col-md-4  col">6</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-12 col comments-site-feed">
+                                +
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-4  col">1</div>
+                            <div class="col-md-4  col">2</div>
+                            <div class="col-md-4  col">3</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8  col">0</div>
+                            <div class="col-md-4  col">.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-12 col comments-site-feed">
+                                =
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
+
+                <!--end calc-->
             </div>
         </div>
 

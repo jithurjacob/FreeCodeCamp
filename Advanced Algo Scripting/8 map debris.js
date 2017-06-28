@@ -5,8 +5,7 @@ function orbitalPeriod(arr) {
     var arr_ = [];
     arr.forEach(function (element) {
         var temp = {};
-        temp["name"] = element["name"];
-        
+        temp["name"] = element["name"];        
         temp["orbitalPeriod"] = Math.round(2 * Math.PI * Math.sqrt( Math.pow((element["avgAlt"]+earthRadius),3)/GM ,0.5));
         arr_.push(temp);
     }, this);
