@@ -155,7 +155,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12  col-panel">0123456789+÷X-123456dfgdfg</div>
+                    <div class="col-md-12  col-panel" id="col-panel"></div>
                 </div>
                 <div class="row">
                     <div class="col-md-3  col" value="clear">CE</div>
@@ -210,7 +210,26 @@
     <script>
         $(".col").on("click", function(){
             var val = $(this).attr("value");
-            
+            switch(val){
+                case "0": 
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+                case "5":
+                case "6":
+                case "7":
+                case "8":
+                case "9":
+                case ".":
+                case "+":
+                case "-":
+                case "/":
+                case "*":$("#col-panel").text($("#col-panel").text() + val);break;
+                case "=":$("#col-panel").text(eval($("#col-panel").text())); break;
+                case "clear":$("#col-panel").text("");break;
+                
+            }
         });
     </script>
 </body>
