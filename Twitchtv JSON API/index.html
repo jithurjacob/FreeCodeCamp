@@ -26,7 +26,8 @@
 
         .twitch_container {
             background-color: white;
-            margin-top: 15%;
+            margin-top: 5%;
+            margin-bottom: 50px;
             /*margin-bottom: 15%;*/
             padding: 20px;
             color: #333;
@@ -69,15 +70,21 @@
             background-color: #333;
             /*background-color: rgba(51, 51, 51, 0.19);*/
         }
-        #stream_data  tr{
+        #stream_data  tr,#stream_data a{
             color: white; 
         }
-        
+        #stream_data td{
+            vertical-align: middle;
+            
+        }
         .online{
             background-color: #06a906;     
         }
         .offline{
             background-color: #757575;       
+        }
+        .user_letter_pic{
+             border-radius: 50%;
         }
     </style>
 </head>
@@ -113,12 +120,17 @@
     </div>
     <script>
         function getStreamStatus() {
-            var users = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
+            var users = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas","comster404"];
             users.forEach(function(user){
                 $.getJSON('https://wind-bow.glitch.me/twitch-api/streams/'+user, function(data) {
                     console.log(data);
                     var online_status = data.stream === null?"offline":"online";
-                    $("#stream_data").append("<tr class="+online_status+"><td>1</td><td>1</td><td>1</td></tr>");
+                    var online_link = data.stream === null?"Offline":"<a target='_blank' href='"+data.stream.channel.url+"'>"+data.stream.channel.game+"</a>";
+                    var row_data = "<tr class="+online_status+"><td><img class='user_letter_pic' src='https://dummyimage.com/40x40/ecf0e7/5c5457.jpg&text=";
+                    row_data+=user.charAt(0).toUpperCase()+"'></img></td><td>";
+                    row_data+=user+"</td><td>";
+                    row_data+=online_link+"</td></tr>";
+                    $("#stream_data").append(row_data);
                 });
             });
             
