@@ -1,5 +1,5 @@
 ﻿<!Doctype html>
-
+<html>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -90,7 +90,7 @@
                 </div>
                 <div class="margin-25 streamers">
                     <div class="table-responsive">
-                        <table class="table table-hover">
+                        <table class="table table-hover" id="stream_data">
                             <tbody>
                                 <tr>
                                     <td>Table cell</td>
@@ -107,14 +107,22 @@
 
     </div>
     <script>
-        function getStatus(filter) {
+        function getStreamStatus() {
             var users = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
+            users.forEach(function(user){
+                $.getJSON('https://wind-bow.glitch.me/twitch-api/streams/'+user, function(data) {
+                    console.log(data);
+                });
+            });
             
         }
+        function filterStatus(filter){
+
+        }
         $('.btn').on('click', function () {
-            getStatus($(this).children()[0].value)
+            filterStatus($(this).children()[0].value);
         });
-        getStatus("all");
+        getStreamStatus();
     </script>
 </body>
 
